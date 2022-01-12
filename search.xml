@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Bug改错之hexo部署问题</title>
+      <link href="/2022/01/12/bug-gai-cuo-zhi-hexo-bu-shu-wen-ti/"/>
+      <url>/2022/01/12/bug-gai-cuo-zhi-hexo-bu-shu-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<p><img src="%E9%97%AE%E9%A2%98%E7%85%A7%E7%89%87.jpg" alt="问题描述"></p><h1 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h1><blockquote><p>在利用<code>hexo</code>部署过程中可能会出现错误</p><p><code>FATAL &#123;   err: Error: Spawn failed       at ChildProcess.&lt;anonymous&gt; (D:\MyBlog\node_modules\hexo-util\lib\spawn.js:51:21)       at ChildProcess.emit (node:events:390:28)       at ChildProcess.cp.emit (D:\MyBlog\node_modules\cross-spawn\lib\enoent.js:34:29)       at Process.ChildProcess._handle.onexit (node:internal/child_process:290:12) &#123;     code: 128   &#125; &#125; Something&#39;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</code></p></blockquote><h1 id="2-解决方案"><a href="#2-解决方案" class="headerlink" title="2. 解决方案"></a>2. 解决方案</h1><h2 id="2-1-解决方式一："><a href="#2-1-解决方式一：" class="headerlink" title="2.1 解决方式一："></a>2.1 解决方式一：</h2><p>1、进入到博客根目录，先把<code>git</code>提交的内容文件夹<code>.deploy_git</code>手动删除，也可利用指令<code>rm -rf .deploy_git</code>对文件夹进行删除</p><p>2、重新执行<code>git config --global core.autocrlf false</code></p><p>3、最后再执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p><h2 id="2-2-解决方式二："><a href="#2-2-解决方式二：" class="headerlink" title="2.2 解决方式二："></a>2.2 解决方式二：</h2><blockquote><p>有可能是因为<code>git</code>的<code>repo</code>配置的地址不正确，可以将<code>http</code>方式变更为<code>ssh</code>方式</p></blockquote><p>1、进入到博客根目录，先把<code>git</code>提交的内容文件夹<code>.deploy_git</code>手动删除，也可利用指令<code>rm -rf .deploy_git</code>对文件夹进行删除</p><p>2、找到博客根目录的<code>_config.yml</code>文件，打开后，对下列的<code>repo</code>进行修改</p><figure class="highlight dts"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">type:</span> git<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">repo:</span> https:<span class="hljs-comment">//github.com/yourname/yourname.github.io.git -&gt; git@github.com:XXXXXXX/XXXXXX.github.io.git</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">branch:</span> master<br></code></pre></td></tr></table></figure><p>3、 最后再执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p><h2 id="2-3-解决方式三：（不太建议）"><a href="#2-3-解决方式三：（不太建议）" class="headerlink" title="2.3 解决方式三：（不太建议）"></a>2.3 解决方式三：（不太建议）</h2><p>1、进入博客根目录 <code>cd D:/MyBlog</code></p><p>2、进入deploy文件夹 <code>cd .deploy_git/</code></p><p>3、强制推送 <code>git push -f</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Bug改错 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Bug </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试文章</title>
       <link href="/2022/01/12/ce-shi-wen-zhang/"/>
       <url>/2022/01/12/ce-shi-wen-zhang/</url>
