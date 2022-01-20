@@ -16,16 +16,16 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最近这几天一边学期其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。 11. 列表11.1 为什么需要列表 变量可以存储一个元素，但是列表是一个“大容器”，可">
+    <meta name="description" content="最近这几天一边学习其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。 11. 列表11.1 为什么需要列表 变量可以存储一个元素，但是列表是一个“大容器”，可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础（中）">
 <meta property="og:url" content="http://p2hemia.icu/2022/01/20/python-ji-chu-zhong/index.html">
 <meta property="og:site_name" content="东坡的藏书屋">
-<meta property="og:description" content="最近这几天一边学期其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。 11. 列表11.1 为什么需要列表 变量可以存储一个元素，但是列表是一个“大容器”，可">
+<meta property="og:description" content="最近这几天一边学习其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。 11. 列表11.1 为什么需要列表 变量可以存储一个元素，但是列表是一个“大容器”，可">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://p2hemia.icu/2022/01/20/python-ji-chu-zhong/python%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.png">
 <meta property="article:published_time" content="2022-01-20T14:19:00.000Z">
-<meta property="article:modified_time" content="2022-01-20T14:25:34.764Z">
+<meta property="article:modified_time" content="2022-01-20T14:33:54.003Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="日常学习">
@@ -209,7 +209,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      133 分钟
+      134 分钟
     </span>
   
 
@@ -249,7 +249,7 @@
             <h1 style="display: none">Python基础（中）</h1>
             
             <div class="markdown-body">
-              <p>最近这几天一边学期其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。</p>
+              <p>最近这几天一边学习其他知识，一边又把Python的基础知识接着整理了一下，这次主要就是整理了Python中比较重要的几个数据结构，分别是列表、字典、元组和集合，作者认为这几块是比较容易让人产生困惑的，以及可能在后续的学习中会弄混淆，所以特别抽出来写一篇Python（中），后续还会接着整理最后下部分的基础知识。</p>
 <h2 id="11-列表"><a href="#11-列表" class="headerlink" title="11. 列表"></a>11. 列表</h2><h3 id="11-1-为什么需要列表"><a href="#11-1-为什么需要列表" class="headerlink" title="11.1 为什么需要列表"></a>11.1 为什么需要列表</h3><ul>
 <li>变量可以存储一个元素，但是列表是一个“大容器”，可以存储N多个元素，程序可以方便地对这些数据进行整体操作</li>
 <li>列表相当于其它语言中的数组</li>
@@ -430,9 +430,11 @@
 <p>由上述代码可见，其实真正决定<code>lst</code>的取值的就在于<code>for</code>前面的表达式为多少，如果是<code>i</code>，那就是<code>range()</code>本身迭代的元素，如果是<code>i*2</code>，那就要把迭代的元素全扩大2倍，就如注意事项说的一样，<code>i*i</code>表示为列表元素的表达式。</p>
 </blockquote>
 <h2 id="12-字典"><a href="#12-字典" class="headerlink" title="12 字典"></a>12 字典</h2><h3 id="12-1-什么是字典"><a href="#12-1-什么是字典" class="headerlink" title="12.1 什么是字典"></a>12.1 什么是字典</h3><ul>
-<li>Python内置的数据结构之一，与列表一样是一个<strong>可变序列</strong></li>
-</ul>
+<li><p>Python内置的数据结构之一，与列表一样是一个<strong>可变序列</strong></p>
 <ul>
+<li><strong>可变</strong>就是指可以执行增删改操作</li>
+</ul>
+</li>
 <li><p>以键值对的方式存储数据，字典是一个<strong>无序的序列</strong></p>
 </li>
 <li><p><code>scores = &#123;&#39;张山&#39;: 100, &#39;李四&#39;: 98, &#39;王五&#39;: 45&#125;</code></p>
