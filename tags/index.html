@@ -350,11 +350,6 @@
 <script  src="/js/boot.js" ></script>
 
 
-  {% if theme.fireworks %}
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/fireworks.js"></script>
-  {% endif %}
   <!-- 雪花特效 -->
 <script type="text/javascript">
   var windowWidth = $(window).width();
@@ -362,6 +357,12 @@
     document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
   }
 </script>
+
+{% if theme.fireworks %}
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+{% endif %}
 
 <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 </body>
