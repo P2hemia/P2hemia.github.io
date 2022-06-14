@@ -489,7 +489,17 @@
   
 
   
+<!-- 添加的代码 一言 -->
+<!-- ========================================================================== -->
 
+  <div class="footer-hitokoto">
+    <a id="hitokotoa" href="#" target="_blank" rel="nofollow noopener noreferrer">
+      <span id="hitokoto"></span>
+    </a>
+  </div>
+
+<!-- ========================================================================== -->
+    
     
 </footer>
 
@@ -514,6 +524,43 @@
 <script  src="/js/plugins.js" ></script>
 
 
+
+    <script type="text/javascript">
+      /*一言API*/
+      $(document).ready(function () {
+        getHitokoto();
+      });
+    
+      function hitokoto(e) {
+        $("#hitokoto").stop().fadeOut(function () {
+          $("#hitokoto").html(e.hitokoto);
+          var element = document.getElementById('hitokotoa');
+          element.href = "https://hitokoto.cn/?uuid=" + e.uuid;
+          $("#hitokoto").stop().fadeIn()
+        })
+      };
+    
+      function getHitokoto() {
+        var e = ["d", "e", "h", "k"];
+        // 返回句子类型 https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&c=' + e[Math.floor(Math.random() * e.length)], {
+          cache: 'no-cache',
+          method: 'GET',
+          mode: 'cors'
+        }).then(
+          response => response.json()
+        ).then(
+          data => {
+            hitokoto(data)
+            setTimeout(getHitokoto, 8000) //再次获取 hitokoto 时间，时间单位是毫秒
+          }
+        ).catch(
+          console.error
+        )
+      };
+    
+    </script>
+    		<!-- 添加的代码，只能放在这。放在第一行的下面，会失效。 -->
 
 <!-- Plugins -->
 
