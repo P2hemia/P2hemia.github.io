@@ -15,16 +15,16 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="选择排序1、选择排序原理选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 简化一下原理，大概就是把数组中的元素分为已排序队列和待排序队列，">
+    <meta name="description" content="冒泡排序1、冒泡排序原理冒泡排序就是一种交换排序，最核心的思想就是冒泡，把数组中最大的那个数字往上冒，但是冒泡的过程中只能和数组中与之相邻的元素进行冒泡。冒泡的过程中，就是两个相邻的元素进行比较，将数字较大（较小）的元素交换到最右边（左边），每次只能进行相邻的两个元素之间的替换，然后依次后移，进行下两个元素之间的替换，由此从0到n-1次两两元素之间的替换。重复扫描待排序序列，并比较每一对相邻的元素">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每日一题之选择排序">
-<meta property="og:url" content="http://p2hemia.icu/null/10176/index.html">
+<meta property="og:title" content="每日一题之冒泡排序">
+<meta property="og:url" content="http://p2hemia.icu/p2hemia/48437/index.html">
 <meta property="og:site_name" content="东坡的藏书屋">
-<meta property="og:description" content="选择排序1、选择排序原理选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。 简化一下原理，大概就是把数组中的元素分为已排序队列和待排序队列，">
+<meta property="og:description" content="冒泡排序1、冒泡排序原理冒泡排序就是一种交换排序，最核心的思想就是冒泡，把数组中最大的那个数字往上冒，但是冒泡的过程中只能和数组中与之相邻的元素进行冒泡。冒泡的过程中，就是两个相邻的元素进行比较，将数字较大（较小）的元素交换到最右边（左边），每次只能进行相邻的两个元素之间的替换，然后依次后移，进行下两个元素之间的替换，由此从0到n-1次两两元素之间的替换。重复扫描待排序序列，并比较每一对相邻的元素">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2022/05/27/zl6FvN2pmGYE41w.png">
-<meta property="article:published_time" content="2022-02-23T01:45:03.000Z">
-<meta property="article:modified_time" content="2022-05-27T05:26:57.768Z">
+<meta property="article:published_time" content="2022-02-20T23:44:17.000Z">
+<meta property="article:modified_time" content="2022-05-27T05:27:22.339Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="每日一题">
@@ -32,7 +32,7 @@
 <meta name="twitter:image" content="https://s2.loli.net/2022/05/27/zl6FvN2pmGYE41w.png">
   
   
-  <title>每日一题之选择排序 - 东坡的藏书屋</title>
+  <title>每日一题之冒泡排序 - 东坡的藏书屋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -178,7 +178,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="每日一题之选择排序">
+            <span class="h2" id="subtitle" title="每日一题之冒泡排序">
               
             </span>
 
@@ -188,8 +188,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-02-23 09:45" pubdate>
-        2022年2月23日 上午
+      <time datetime="2022-02-21 07:44" pubdate>
+        2022年2月21日 早上
       </time>
     </span>
   
@@ -199,7 +199,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.9k 字
+      3k 字
     </span>
   
 
@@ -208,7 +208,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16 分钟
+      26 分钟
     </span>
   
 
@@ -250,35 +250,76 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">每日一题之选择排序</h1>
+            <h1 style="display: none">每日一题之冒泡排序</h1>
             
             <div class="markdown-body">
-              <h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><h2 id="1、选择排序原理"><a href="#1、选择排序原理" class="headerlink" title="1、选择排序原理"></a>1、选择排序原理</h2><p><strong>选择排序（Selection sort）</strong>是一种简单直观的排序算法。它的工作原理是：第一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后再从剩余的未排序元素中寻找到最小（大）元素，然后放到已排序的序列的末尾。以此类推，直到全部待排序的数据元素的个数为零。选择排序是不稳定的排序方法。</p>
-<p>简化一下原理，大概就是把数组中的元素分为已排序队列和待排序队列，每次在待排序队列中选择出最小的元素（或者最大的元素）放入到已排序队列中的尾端，依次重复操作，直至整个数组都是已排序队列。</p>
-<h2 id="2、选择排序的步骤"><a href="#2、选择排序的步骤" class="headerlink" title="2、选择排序的步骤"></a>2、选择排序的步骤</h2><p><img src="v2-c7bbbfaf4e9853595f439e25420197a8_720w.jpg" srcset="/img/loading.gif" lazyload alt="步骤图解"></p>
-<h2 id="3、选择排序的代码实现"><a href="#3、选择排序的代码实现" class="headerlink" title="3、选择排序的代码实现"></a>3、选择排序的代码实现</h2><ul>
-<li>Java</li>
+              <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h2 id="1、冒泡排序原理"><a href="#1、冒泡排序原理" class="headerlink" title="1、冒泡排序原理"></a>1、冒泡排序原理</h2><p><strong>冒泡排序就是一种交换排序，最核心的思想就是冒泡，把数组中最大的那个数字往上冒，但是冒泡的过程中只能和数组中与之相邻的元素进行冒泡。</strong><br>冒泡的过程中，就是两个相邻的元素进行比较，将数字较大（较小）的元素交换到最右边（左边），每次只能进行相邻的两个元素之间的替换，然后依次后移，进行下两个元素之间的替换，<strong>由此从0到n-1次两两元素之间的替换</strong>。重复扫描待排序序列，并比较每一对相邻的元素，当该对元素顺序不正确时进行交换。一直重复这个过程，直到没有任何两个相邻元素可以交换，就表明完成了排序。</p>
+<h2 id="2、冒泡排序的步骤"><a href="#2、冒泡排序的步骤" class="headerlink" title="2、冒泡排序的步骤"></a>2、冒泡排序的步骤</h2><p>临时定义一个数组<code>[4,1,3,7,5]</code>，按照从小到大进行排序，来模拟演示每一次的排序过程  </p>
+<ul>
+<li>第一轮排序，此时整个序列中的元素都位于待排序序列，依次扫描每对相邻的元素，并对顺序不正确的元素对交换位置。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectionSort</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">selectionSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, n = nums.length; i &lt; n - <span class="hljs-number">1</span>; ++i) &#123;<br>            <span class="hljs-keyword">int</span> minIndex = i;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j &lt; n; ++j) &#123;<br>                <span class="hljs-keyword">if</span> (nums[j] &lt; nums[minIndex]) &#123;<br>                    minIndex = j;<br>                &#125;<br>            &#125;<br>            swap(nums, minIndex, i);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> t = nums[i];<br>        nums[i] = nums[j];<br>        nums[j] = t;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span>[] nums = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>&#125;;<br>        selectionSort(nums);<br>        System.out.println(Arrays.toString(nums));<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<ol>
+<li>第一次比较：4和1进行比较，4比1大，则新序列变成<code>[1,4,3,7,5]</code></li>
+<li>第二次比较：4和3进行比较，4比3大，则新序列变成<code>[1,3,4,7,5]</code></li>
+<li>第三次比较：4和7进行比较，此时7比4大，则序列不变，仍为<code>[1,3,4,7,5]</code></li>
+<li>第四次比较：7和5进行比较，7比5大，则新序列变成<code>[1,3,4,5,7]</code><blockquote>
+<p>经过第一轮冒泡排序，从待排序序列中找出了最大数 7，并将其放到了待排序序列的尾部，并入已排序序列中。  </p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>第二轮排序，此时待排序序列只包含前 4 个元素，依次扫描每对相邻元素，对顺序不正确的元素对交换位置。</li>
+</ul>
+<ol>
+<li>第一次比较：1和3进行比较，此时3比1大，则序列不变，仍为<code>[1,3,4,5,7]</code></li>
+<li>第二次比较：3和4进行比较，此时4比3大，则序列不变，仍为<code>[1,3,4,5,7]</code></li>
+<li>第三次比较：4和5进行比较，此时5比4大，则序列不变，仍为<code>[1,3,4,5,7]</code><blockquote>
+<p>经过第二次冒泡排序，从待排序序列中找到了最大数 5，并将其放到了待排序序列的尾部，并入已排序序列中。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>第三轮排序，此时待排序序列只包含前 3 个元素，一次扫描每对相邻元素，对顺序不正确的元素对交换位置。</li>
+</ul>
+<ol>
+<li>第一次比较：1和3进行比较，此时3比1大，则序列不变，仍为<code>[1,3,4,5,7]</code></li>
+<li>第二次比较：3和4进行比较，此时4比3大，则序列不变，仍为<code>[1,3,4,5,7]</code><blockquote>
+<p>进过三第三次冒泡排序，从待排列序列中找到了最大数 4，并将其放到了待排序序列的尾部，并入到已排序虚了中。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>第四轮排序，此时待排序列中只包含两个元素<code>[1,3]</code></li>
+</ul>
+<ol>
+<li>第一次比较：1和3进行比较，此时3比1大，则序列不变，仍为<code>[1,3,4,5,7]</code>  </li>
+</ol>
+<blockquote>
+<p>当进行第五轮冒泡排序时，由于待排序序列中仅剩 1 个元素，无论再进行相邻元素的比较，因此直接将其并入已排序序列中，此时的序列就认定为已排序好的序列  </p>
+</blockquote>
+<p>所以最终的比较结果为<code>[1,3,4,5,7]</code>  </p>
+<h2 id="2、冒泡排序的代码实现"><a href="#2、冒泡排序的代码实现" class="headerlink" title="2、冒泡排序的代码实现"></a>2、冒泡排序的代码实现</h2><blockquote>
+<p>作者能力有限，考虑到自己的基础问题，只能写出来C、C++、Java版本的算法实现</p>
+</blockquote>
+<ul>
+<li>java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></div></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BubbleSort</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bubbleSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">boolean</span> hasChange = <span class="hljs-keyword">true</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, n = nums.length; i &lt; n - <span class="hljs-number">1</span> &amp;&amp; hasChange; ++i) &#123;<br>            hasChange = <span class="hljs-keyword">false</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n - i - <span class="hljs-number">1</span>; ++j) &#123;<br>                <span class="hljs-keyword">if</span> (nums[j] &gt; nums[j + <span class="hljs-number">1</span>]) &#123;<br>                    swap(nums, j, j + <span class="hljs-number">1</span>);<br>                    hasChange = <span class="hljs-keyword">true</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> t = nums[i];<br>        nums[i] = nums[j];<br>        nums[j] = t;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span>[] nums = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">8</span>&#125;;<br>        bubbleSort(nums);<br>        System.out.println(Arrays.toString(nums));<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 <ul>
 <li>C++</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">selectsort</span><span class="hljs-params">( vector&lt;<span class="hljs-keyword">int</span>&gt; &amp; vec )</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; vec.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++ )<br>    &#123;<br>        <span class="hljs-keyword">int</span> minidx = i;<br>        <span class="hljs-keyword">for</span> ( <span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; vec.<span class="hljs-built_in">size</span>(); j++ )<br>        &#123;<br>            <span class="hljs-keyword">if</span> ( vec[minidx] &gt; vec[j] )<br>            &#123;<br>                minidx = j;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-built_in">swap</span>( vec[i], vec[minidx] );<br>    &#125;<br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">( <span class="hljs-keyword">void</span> )</span></span><br><span class="hljs-function"></span>&#123;<br>    vector&lt;<span class="hljs-keyword">int</span>&gt; vec = &#123; <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span> &#125;;<br>    <span class="hljs-built_in">selectsort</span>( vec );<br>    <span class="hljs-built_in">printvec</span>( vec, <span class="hljs-string">&quot;after insert sort&quot;</span> );<br>    <span class="hljs-keyword">return</span>(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-comment">/* 简单版本 */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bubblesort</span><span class="hljs-params">(vector&lt;<span class="hljs-keyword">int</span>&gt; &amp;vec)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; vec.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; vec.<span class="hljs-built_in">size</span>() - i - <span class="hljs-number">1</span>; j++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (vec[j] &gt; vec[j + <span class="hljs-number">1</span>])<br>            &#123;<br>                <span class="hljs-built_in">swap</span>(vec[j], vec[j + <span class="hljs-number">1</span>]);<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 改进版本 */</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bubblesort1</span><span class="hljs-params">(vector&lt;<span class="hljs-keyword">int</span>&gt; &amp;vec)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; vec.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i++)<br>    &#123;<br>        <span class="hljs-keyword">bool</span> exchange = <span class="hljs-literal">false</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; vec.<span class="hljs-built_in">size</span>() - i - <span class="hljs-number">1</span>; j++)<br>        &#123;<br>            <span class="hljs-keyword">if</span> (vec[j] &gt; vec[j + <span class="hljs-number">1</span>])<br>            &#123;<br>                <span class="hljs-built_in">swap</span>(vec[j], vec[j + <span class="hljs-number">1</span>]);<br>                exchange = <span class="hljs-literal">true</span>;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> (!exchange)<br>        &#123;<br>            <span class="hljs-keyword">break</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printvec</span><span class="hljs-params">(<span class="hljs-keyword">const</span> vector&lt;<span class="hljs-keyword">int</span>&gt; &amp;vec, <span class="hljs-keyword">const</span> string &amp;strbegin = <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-keyword">const</span> string &amp;strend = <span class="hljs-string">&quot;&quot;</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>    cout &lt;&lt; strbegin &lt;&lt; endl;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> val : vec)<br>    &#123;<br>        cout &lt;&lt; val &lt;&lt; <span class="hljs-string">&quot;\t&quot;</span>;<br>    &#125;<br><br>    cout &lt;&lt; endl;<br>    cout &lt;&lt; strend &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span><br><span class="hljs-function"></span>&#123;<br>    vector&lt;<span class="hljs-keyword">int</span>&gt; vec = &#123;<span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-built_in">printvec</span>(vec);<br><br>    <span class="hljs-built_in">bubblesort1</span>(vec);<br><br>    <span class="hljs-built_in">printvec</span>(vec, <span class="hljs-string">&quot;after sort&quot;</span>, <span class="hljs-string">&quot;&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
-<ul>
-<li>小测试</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">kuaipai</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">int</span>[] str = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;<span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-keyword">int</span> length=str.length;<br>    <span class="hljs-keyword">int</span> min;<br>    <span class="hljs-keyword">int</span> i;<br>    <span class="hljs-keyword">int</span> j;<br>    <span class="hljs-keyword">for</span> (i=<span class="hljs-number">0</span>;i&lt;length;i++) &#123;<br>        min=i;<br>        <span class="hljs-keyword">for</span>(j=i+<span class="hljs-number">1</span>;j&lt;length;j++) &#123;<br>            <span class="hljs-keyword">if</span>(str[j]&lt;str[min]) &#123;<br>                min=j;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (min!=i) &#123;<br>            <span class="hljs-keyword">int</span> temp;<br>            temp=str[min];<br>            str[min]=str[i];<br>            str[i]=temp;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;length;i++) &#123;<br>        System.out.println(str[i]);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="4、选择排序的算法分析"><a href="#4、选择排序的算法分析" class="headerlink" title="4、选择排序的算法分析"></a>4、选择排序的算法分析</h2><p>空间复杂度 O(1)，时间复杂度 O(n²)。</p>
-<p><strong>选择排序是一种不稳定的排序算法</strong>。选择排序每次都要找剩余未排序元素中的最小值，并和前面的元素交换位置，这样破坏了稳定性。</p>
+<h2 id="4、冒泡排序的算法分析"><a href="#4、冒泡排序的算法分析" class="headerlink" title="4、冒泡排序的算法分析"></a>4、冒泡排序的算法分析</h2><p>通过分析冒泡排序的实现代码可以得知，该算法的最差时间复杂度为<code>O(n2)</code>，最优时间复杂度为<code>O(n)</code>，平均时间复杂度为 <code>O(n2)</code>。</p>
+<p><strong>冒泡排序是一种简单的排序算法，它也是一种稳定排序算法。</strong></p>
+<blockquote>
+<p>一般情况下，称某个排序算法稳定，指的是当待排序序列中有相同的元素时，它们的相对位置在排序前后不会发生改变。</p>
+</blockquote>
 
             </div>
             <hr>
@@ -315,9 +356,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/null/5916/">
+                      <a href="/p2hemia/11213/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">每日一题之归并排序</span>
+                        <span class="hidden-mobile">每日一题之插入排序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -325,8 +366,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/null/11213/">
-                        <span class="hidden-mobile">每日一题之插入排序</span>
+                      <a href="/p2hemia/22715/">
+                        <span class="hidden-mobile">MyBatis学习笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
